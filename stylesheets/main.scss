@@ -1,0 +1,106 @@
+$tiffany: #02fce7;
+$back: #282828;
+
+// Font Variables
+
+$rob: 'Roboto Condensed', sans-serif;
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed);
+
+
+body {
+	border: 0;
+	margin: 0;
+	padding: 0;
+	background-color: $back;
+}
+
+#wrapper {
+	height: 100vh;
+	width: 100%;
+	h4 {
+		text-align: center;
+		color: $tiffany;
+		margin-bottom: 0;
+	}
+}
+
+#player {
+	top: 50px;
+	height: 70%;
+	width: 40%;
+	border: 3px solid $tiffany;
+	margin: 0 auto;
+	position: relative;
+	#cover {
+		height: 65%;
+		width: 100%;
+		img {
+			height: 100%;
+			width: 100%;
+			overflow: hidden;
+		}
+	}
+	#buttonWrapper {
+		height: 20%;
+		width: 100%;
+		border-top: 2px solid $tiffany;
+		text-align: center;
+		position: absolute;
+		bottom: 0;
+		.control {
+			height: 40px;
+			width: 80px;
+			border: 2px solid $tiffany;
+			background-color: $back;
+			color: $tiffany;
+			font-size: 1.2em;
+			font-weight: 700;
+			font-family: $rob;
+			margin-top: 25px;
+			&:hover {
+				color: $back;
+				background-color: $tiffany;
+			}
+		}
+	}
+	#inputBox {
+		text-align: center;
+		height: 15%;
+		width: 100%;
+		border-bottom: 2px solid $tiffany;
+		input {
+			margin-top: 25px;
+			border: 2px solid $tiffany;
+			height: 30px;
+			width: 120px;
+			background-color: $back;
+			color: $tiffany;
+			font-size: 1em;
+			font-weight: 600;
+			font-family: $rob;
+		}
+		#inputSong {
+			width: 200px;
+		}
+		#loadButton {
+			&:hover {
+				color: $back;
+				background-color: $tiffany;
+			}
+		}
+		#random {
+			border: 2px solid $tiffany;
+			height: 30px;
+			width: 100px;
+			background-color: $back;
+			color: $tiffany;
+			font-size: 1em;
+			font-weight: 600;
+			font-family: $rob;
+			&:hover {
+				color: $back;
+				background-color: $tiffany;
+			}
+		}
+	}
+}

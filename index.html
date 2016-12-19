@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Juke Box</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+	<audio src="strobe.mp3" id="strobe"></audio>
+	<audio src="findyoutritonal.mp3" id="findyou"></audio>
+	<audio src="redlight.mp3" id="redlight"></audio>
+	<audio src="bad.mp3" id="bad"></audio>
+	<audio id="inputsong"></audio>
+	<div id="wrapper">
+		<h4>Stop current song before playing random song</h4>
+		<div id="player">
+			<div id="inputBox">
+				<input type="text" name="inputSong" id="inputSong">
+				<input type="submit" id="loadButton" value="Play Your Song!">
+				<button id="random">Random</button>
+			</div>
+			<div id="cover">
+				<img src="css/images/edm.jpg">
+			</div>
+			<div id="buttonWrapper">
+				<button class="control" id="play">Play</button>
+				<button class="control" id="pause">Pause</button>
+				<button class="control" id="stop">Stop</button>
+				<button class="control" id="next">Next</button>
+			</div>
+		</div>
+	</div>
+
+
+
+	<script src="script.js"></script>
+</body>
+</html>
