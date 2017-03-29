@@ -52,7 +52,7 @@ function Song(track){
 	this.track = track;
 }
 
-// These are song objects that represent a song 
+// These are song objects that represent a song
 // that is already in the html page.
 var strobeTrack = new Song(deadMau5);
 var findyouTrack = new Song(tritonal);
@@ -60,9 +60,9 @@ var redlight = new Song(tiesto);
 var bad = new Song(guetta);
 
 
-// This creates a new jukebox object and you can 
-// use the play/stop/load method on that certain 
-// jukebox. 
+// This creates a new jukebox object and you can
+// use the play/stop/load method on that certain
+// jukebox.
 var edm = new Jukebox();
 edm.addTracks(findyouTrack);
 edm.addTracks(strobeTrack);
@@ -73,26 +73,24 @@ edm.addTracks(bad);
 // https://developer.mozilla.org/en-US/docs/Web/Events/click
 // This click events allow me to play/pause/
 
+var controls = document.getElementById("buttonWrapper");
 
-// This is the button to play the current song 
-document.getElementById("play").addEventListener("click",function(){
-	edm.play(songCount);
-});
-
-// This is pausing the song and you can play it at the time it stopped
-document.getElementById("stop").addEventListener("click",function(){
-	edm.stop(songCount);
-});
-
-// This is stopping the song and 'resetting' it to the beginning
-document.getElementById("pause").addEventListener("click",function(){
-	edm.pause(songCount);
-});
-
-// This is going to the next song in the Jukebox.this.tracks attribute
-document.getElementById("next").addEventListener("click",function(){
-	edm.nextSong(songCount);
-});
+controls.addEventListener("click", (e) => {
+	switch(e.target.id) {
+		case "play":
+			edm.play(songCount);
+			break;
+		case "stop":
+			edm.stop(songCount);
+			break;
+		case "pause":
+			edm.pause(songCount);
+			break;
+		case "next":
+			edm.nextSong(songCount);
+			break;
+	}
+})
 
 document.getElementById("loadButton").addEventListener("click",function(){
 	var requestSong = document.getElementById("inputSong").value;
@@ -106,7 +104,3 @@ document.getElementById("loadButton").addEventListener("click",function(){
 document.getElementById("random").addEventListener("click",function(){
 	edm.random(songCount);
 });
-
-
-
-
